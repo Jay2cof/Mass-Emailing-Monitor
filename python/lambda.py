@@ -3,4 +3,3 @@ def lambda_handler(event, context):
     return {
         'message : message'
     }
-    lambda_handler(event, context)
