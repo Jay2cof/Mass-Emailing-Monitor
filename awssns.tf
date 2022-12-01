@@ -40,7 +40,7 @@ data "aws_iam_policy_document" "sns_topic_policy" {
     }
   }
 }
-resource "aws_cloudwatch_event_target" "sns-publish_every_five_minutes" {
+resource "aws_cloudwatch_event_target" "sns-publish" {
   count = "1"
   rule = aws_cloudwatch_event_rule.publish-sns-rule.name
   target_id = "email-monitor"
