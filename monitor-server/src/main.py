@@ -1,16 +1,8 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, HTTPException
 
 app = FastAPI()
 
-
-
-@app.get("/")
-def Health():
-    return {"Health": "ok"}
-
-@app.get("/job")
-def getjob():
-    return [{
+jobs_data = [{
         "id": "uid1",
         "title": "Nice Job",
         "description": "super nice job"
@@ -20,3 +12,22 @@ def getjob():
         "description": "super nice job2"
     }]
 
+@app.get("/job")
+def health():
+    return {"health": "OK"}
+
+@app.get("/job")  
+def getJobs():
+    return jobs_data
+
+@app.get("/job")
+def getJobs():
+    return jobs_data
+
+@app.get("/job/{id}")
+def getJob(id):
+    for job in jobs_data:
+        if(job["id"]==id):
+            return job
+    raise HTTPException(
+        status_code=404, detail="job with id " + id + " not founds")        
