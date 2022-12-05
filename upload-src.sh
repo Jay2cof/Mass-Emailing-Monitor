@@ -6,16 +6,16 @@ mkdir build
 echo "zip files for server"
 cd monitor-server
 zip ../build/monitor-server.zip requirements.txt
-zip -r ../build/api-server.zip src 
+zip -r ../build/monitor-server.zip src 
 cd ..
 
 echo  "upload to s3"
-aws s3 cp build/api-server.zip s3://job-notifier-src-bucket-21345/
+aws s3 cp build/monitor-server.zip s3://email-monitor-jay/
 
 
 mkdir infrastructure/build
 
-cd job-data-crawler/src
+cd job-crawer-data/src
 zip -r ../../infrastructure/build/job_crawler.zip .
 cd ../..
 
@@ -29,4 +29,4 @@ zip -r ../build/requests-layer.zip .
 cd ..
 
 echo  "upload to s3"
-aws s3 cp build/requests-layer.zip s3://job-notifier-src-bucket-21345/
+aws s3 cp build/requests-layer.zip s3://email-monitor-jay/

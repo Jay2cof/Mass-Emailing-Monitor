@@ -3,14 +3,14 @@ import os
 
 dynamodb = boto3.resource('dynamodb')
 
-jobs_table_name = os.getenv('JOBS_TABLE_NAME')
+email_monitor_name = os.getenv('EMAIL-MONITOR_NAME')
 
-jobs_table = dynamodb.Table(jobs_table_name)
+email_table = dynamodb.Table(email_monitor_name)
 
 
-def save_job(job):
-    jobs_table.put_item(Item = job)
+def save_email(email):
+    email_table.put_item(Item = email)
 
-def save_jobs(jobs):
-    for job in jobs:
-        save_job(job)
+def save_emails(emails):
+    for email in emails:
+        save_email(email)
