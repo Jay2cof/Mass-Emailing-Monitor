@@ -5,3 +5,5 @@ terraform.tfstate
 .DS_Store
 lambda.zip
 build
+*_venv
+emailmonitor_server_venv

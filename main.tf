@@ -5,6 +5,12 @@ terraform {
       version = "~> 4.40"
     }
   }
+  backend "s3" {
+    bucket = "email-monitor-jay"
+    key    = "terraform.tfstate"
+    region = "us-west-2"
+
+  }
 }
 provider "aws" {
   region = "us-west-2"
