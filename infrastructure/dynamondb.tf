@@ -11,5 +11,5 @@ resource "aws_dynamodb_table" "emailing-monitor" {
   write_capacity = 5
 
   stream_enabled = true
-  stream_view_type = "SEND_EMAILS"
+  stream_view_type = "NEW_AND_OLD_IMAGES"
 }
