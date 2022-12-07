@@ -17,9 +17,11 @@ jobs:
       - uses: actions/checkout@v3
       - name: Setup src bucket
         run:  |
+          cd infrastructure 
           sh setup_src_bucket.sh
       - name: build and upload src
         run:  |
+          cd infrastructure 
           sh upload-src.sh
       - name: run terraform
         run:  |
