@@ -3,3 +3,4 @@ __pycache__
 __pycache__
 *_terraform.tfstate
 terraform.tfstate.backup
+emailmonitor_server_venv
