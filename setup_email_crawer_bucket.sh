@@ -1,4 +1,4 @@
-S3_BUCKET_NAME=email-notifier-monitor-jay
+S3_BUCKET_NAME=crawer-emails-bucket
 REGION=us-west-2
 if aws s3 ls "s3://$S3_BUCKET_NAME" 2>&1 | grep -q 'An error occurred'
 then
@@ -6,4 +6,3 @@ then
 else
     echo "bucket already exists"
 fi
-
