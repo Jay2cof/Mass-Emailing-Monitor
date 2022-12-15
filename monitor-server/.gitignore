@@ -1,0 +1,4 @@
+.DS_Store
+*_venv
+__pycache__
+emailmonitor_server_venv
