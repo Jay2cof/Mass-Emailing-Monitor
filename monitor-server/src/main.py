@@ -7,15 +7,15 @@ app = FastAPI()
 
 emails = [{
         "topic": "jobs emails",
-        "address" : "email address",
+        "address" : "jaytest@de.aol",
         "detail" : "new jobs with positions"
     },{
         "topic": "salary emails",
-        "address" : "email address",
+        "address" : "fredtest@de.aol",
         "detail" : "salary deatils"
     },{
         "topic": "workers benefit emails",
-        "address" : "email address",
+        "address" : "charls@de.aol",
         "detail" : "new benefits list"
     }]
 
